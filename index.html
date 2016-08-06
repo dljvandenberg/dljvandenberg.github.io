@@ -36,7 +36,19 @@
         <section id="main_content">
 
           <p>
-            <iframe src="html/africafoodprices.html" height="400" width="100%" seamless="seamless" frameBorder="0"></iframe>
+            <style>
+              #loadImg{position:absolute;z-index:999;left:40%;}
+              #loadImg div{display:table-cell;height:400px;text-align:center;vertical-align:middle;}
+            </style>
+            <div id="loadImg">
+              <div><img src="images/loading.gif" /></div>
+            </div>
+
+            <iframe border=0 name=iframe src="html/africafoodprices.html" 
+              height="400" width="100%" seamless="seamless" frameBorder="0" 
+              onload="document.getElementById('loadImg').style.display='none';">
+            </iframe>
+
           </p>
 
           <h3>Current projects</h3>
